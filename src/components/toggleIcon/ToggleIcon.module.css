@@ -1,0 +1,13 @@
+.layoutImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .layoutImage {
+        display: block;
+    }
+}

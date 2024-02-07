@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/* Import Google Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  /* All Color  */
+  --main-bgColor: #14224D;
+  --main-forColor: #fff;
+  --link-forColor: #FFFFFF99;
+  --link-hoverColor: #54CDA9;
+  --footer-forColor: #FFFFFF4D;
+  --paragraph-forColor: #FFFFFFCC;
+  --card-bgColor: #FFFFFF;
+  --cardDetails-forColor: #14224D;
+  --borderColorTopic: rgba(20, 34, 77, 0.20);
+  --colorTopic: rgba(20, 34, 77, 0.80);
+  --by-color: #rgba(20, 34, 77, 0.40);
+  --seeAll-color: #3C69D6;
+  /* All Size For BorderRadius  */
+  --radiusCard: 0.5rem;
+  --RadiusTopic: 6.25rem;
+  /* Transition */
+  --main-transition: .3s;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--main-bgColor);
+  color: var(--main-forColor);
+  font-family: 'Poppins', sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+header nav ul li:hover,
+header nav ul li.active {
+  color: var(--link-hoverColor)
 }

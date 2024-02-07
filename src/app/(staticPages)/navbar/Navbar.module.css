@@ -1,0 +1,32 @@
+.header {
+    width: 91.8888%;
+    margin: 2.25rem auto;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-shrink: 0;
+}
+
+.layoutIcons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Start Media Query  */
+@media (max-width: 767px) {
+    .links {
+        display: none;
+    }
+}
