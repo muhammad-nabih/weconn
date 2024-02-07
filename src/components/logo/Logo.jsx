@@ -5,12 +5,7 @@ const Logo = () => {
   return (
     <div className={styles.layoutImage}>
       <Link href={"/"}>
-        <Image
-          src={"/images/logoDarkMode.svg"}
-          alt="Logo"
-          width={60}
-          height={60}
-        />
+        <Image src={"/images/logoDarkMode.svg"} alt="Logo" fill />
       </Link>
     </div>
   );

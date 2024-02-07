@@ -3,14 +3,17 @@ import styles from "./Navbar.module.css";
 // All Components
 import Logo from "@/components/logo/Logo";
 import ItemsEle from "@/components/itemsEle/ItemsEle";
-import SearchIcon from "@/components/search/search";
+import Search from "@/components/search/Search";
 import ToggleIcon from "@/components/toggleIcon/ToggleIcon";
 
 const Navbar = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
+        {/* Logo Icon */}
         <Logo />
+
+        {/* Links */}
         <ul className={styles.links}>
           <ItemsEle
             itemContent={"Explore"}
@@ -23,13 +26,13 @@ const Navbar = () => {
             url={"/Articles"}
             isActive={"edit it "}
           />
-
           <ItemsEle itemContent={"news"} url={"/news"} isActive={"edit it "} />
-
           <ItemsEle itemContent={"IDOs"} url={"/IDOs"} isActive={"edit it "} />
         </ul>
+
+        {/* SearchIcon,searchInput And ToggleIcon */}
         <div className={styles.layoutIcons}>
-          <SearchIcon />
+          <Search />
           <ToggleIcon />
         </div>
       </nav>

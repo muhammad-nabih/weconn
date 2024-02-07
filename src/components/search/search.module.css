@@ -1,0 +1,63 @@
+/* Default styles */
+.searchBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchIcon {
+    display: flex;
+    box-sizing: border-box;
+    padding: 9px 10px 11px 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    cursor: pointer;
+}
+
+.input {
+    background-color: transparent;
+    color: var(--link-forColor);
+    border: none;
+    border-bottom: 1px solid var(--link-forColor);
+    font-size: 1rem;
+}
+
+.input:focus {
+    outline: none;
+}
+
+/* Media queries */
+@media (max-width: 960px) {
+
+    /* Tablet, landscape iPad, low-resolution laptops and desktops */
+    .input {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* Mobile devices */
+    .searchIcon {
+        border: none;
+    }
+
+    .input {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 319px) {
+
+    /* Smaller mobile devices */
+    .searchIcon {
+        border: 1px solid transparent;
+    }
+
+    .input {
+        font-size: 0.7rem;
+        width: 80px;
+    }
+}
