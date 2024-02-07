@@ -1,39 +1,41 @@
+"use client";
 import styles from "./Navbar.module.css";
-
-// All Components
 import Logo from "@/components/logo/Logo";
-import ItemsEle from "@/components/itemsEle/ItemsEle";
+import NavItem from "@/components/navItem/NavItem";
 import Search from "@/components/search/Search";
 import ToggleIcon from "@/components/toggleIcon/ToggleIcon";
-
-
+import { useState } from "react";
+import { useLinks } from "@/contexts/linksContexts/LinksContext";
 
 const Navbar = () => {
+  // import all data links from context provider
+  const { links } = useLinks();
+
+  // Make Links dynamically active
+  const [activeStatus, setActiveStatus] = useState(null);
+  function handleChangeActive(newActiveStatus) {
+    setActiveStatus(newActiveStatus);
+  }
+
   return (
     <header className={styles.header}>
-    
       <nav className={styles.nav}>
         {/* Logo Icon */}
         <Logo />
 
-        {/* Links */}
+        {/* Navigation Links */}
         <ul className={styles.links}>
-          <ItemsEle
-            itemContent={"Explore"}
-            url={"/Explore"}
-            isActive={"active"}
-          />
-
-          <ItemsEle
-            itemContent={"Articles"}
-            url={"/Articles"}
-            isActive={"edit it "}
-          />
-          <ItemsEle itemContent={"news"} url={"/news"} isActive={"edit it "} />
-          <ItemsEle itemContent={"IDOs"} url={"/IDOs"} isActive={"edit it "} />
+          {links.map((link) => (
+            <NavItem
+              handleChangeActive={handleChangeActive}
+              key={link.id}
+              {...link}
+              isActive={link.id === activeStatus ? "active" : ""}
+            />
+          ))}
         </ul>
 
-        {/* SearchIcon,searchInput And ToggleIcon */}
+        {/* Search Icon, Search Input, and Toggle Icon */}
         <div className={styles.layoutIcons}>
           <Search />
           <ToggleIcon />

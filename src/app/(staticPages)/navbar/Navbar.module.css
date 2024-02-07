@@ -1,14 +1,18 @@
 .header {
-    width: 91.8888%;
-    margin: 2.25rem auto;
-    position: relative;
-    overflow: hidden;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    border: 1px solid transparent;
+
 }
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 91.8888%;
+    margin: 2rem auto .25rem;
+
 }
 
 .links {
@@ -30,5 +34,14 @@
 @media (max-width: 767px) {
     .links {
         display: none;
+    }
+
+    .layoutIcons {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .nav {
+        gap: 10px;
     }
 }

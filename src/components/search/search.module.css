@@ -46,6 +46,13 @@
 
     .input {
         font-size: 0.8rem;
+        width: 80%;
+    }
+
+    .searchBox {
+        flex: 1;
+        justify-content: flex-end;
+        padding: 0 5px;
     }
 }
 
