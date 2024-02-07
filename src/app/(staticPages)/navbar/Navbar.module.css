@@ -2,6 +2,7 @@
     width: 91.8888%;
     margin: 2.25rem auto;
     position: relative;
+    overflow: hidden;
 }
 
 .nav {

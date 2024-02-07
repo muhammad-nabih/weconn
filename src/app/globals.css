@@ -30,6 +30,7 @@ body {
   background-color: var(--main-bgColor);
   color: var(--main-forColor);
   font-family: 'Poppins', sans-serif;
+
 }
 
 header nav ul li:hover,

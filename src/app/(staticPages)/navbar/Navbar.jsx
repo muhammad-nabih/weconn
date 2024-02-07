@@ -6,9 +6,12 @@ import ItemsEle from "@/components/itemsEle/ItemsEle";
 import Search from "@/components/search/Search";
 import ToggleIcon from "@/components/toggleIcon/ToggleIcon";
 
+
+
 const Navbar = () => {
   return (
     <header className={styles.header}>
+    
       <nav className={styles.nav}>
         {/* Logo Icon */}
         <Logo />

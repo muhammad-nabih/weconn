@@ -1,0 +1,28 @@
+.lightness {
+    position: absolute;
+    opacity: .7;
+    filter: blur(200px);
+    top: -25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #294f7d;
+ z-index: -10;
+}
+
+@media (max-width: 767px) {
+    .lightness {
+        filter: blur(180px);
+        top: -10%;
+        left: 50%;
+
+
+    }
+}
+
+@media (max-width: 767px) {
+    .lightness {
+        filter: blur(150px);
+        top: -10%;
+        left: 50%;
+    }
+}
