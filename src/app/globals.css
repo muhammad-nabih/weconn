@@ -20,7 +20,7 @@
   --by-color: #rgba(20, 34, 77, 0.40);
   --seeAll-color: #3C69D6;
   --asideBg: #16285F;
-  --asideCover-color: rgba(12, 21, 50, 0.80);
+  --asideCoverBg: rgba(12, 21, 50, 0.80);
   /* All Size For BorderRadius  */
   --radiusCard: 0.5rem;
   --RadiusTopic: 6.25rem;
@@ -32,10 +32,10 @@ body {
   background-color: var(--main-bgColor);
   color: var(--main-forColor);
   font-family: 'Poppins', sans-serif;
-  height: 1000rem;
+  /* height: 1000rem; */
 }
 
-header nav ul li:hover,
-header nav ul li.active {
+header  ul li:hover,
+header  ul li.active {
   color: var(--link-hoverColor)
 }

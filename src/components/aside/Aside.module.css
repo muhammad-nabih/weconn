@@ -1,0 +1,77 @@
+.aside {
+    position: fixed;
+    background-color: var(--asideCoverBg);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: left .5s ease-in-out ;
+
+}
+
+.frame {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: inherit;
+    background-color: var(--asideBg);
+    width: calc(100% - 5.94rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.75rem 1rem;
+    width: calc(100% - 2rem);
+}
+
+.imageContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    ;
+    cursor: pointer;
+}
+
+.h2 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+/* Start Links  */
+.links {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 1.88rem;
+    width: calc(100% - 2rem);
+    flex: 1;
+    margin-top: 3.75rem;
+}
+
+/* End Links */
+.footer {
+    color: rgba(255, 255, 255, 0.40);
+    font-family: Poppins;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 1.25rem;
+
+}

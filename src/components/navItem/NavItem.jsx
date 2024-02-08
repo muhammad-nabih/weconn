@@ -1,6 +1,8 @@
 "use client";
+// Import necessary modules
 import styles from "./NavItem.module.css";
 import Link from "next/link";
+
 const NavItem = ({
   itemContent,
   url,
@@ -8,18 +10,18 @@ const NavItem = ({
   isActive,
   handleChangeActive,
 }) => {
+  // Function to handle click on the item
   const handleClick = () => {
+    // Calling the provided function to change the active item
     handleChangeActive(catchLinkById);
   };
 
   return (
-    <Link
-      href={url}
-      onClick={(e) => {
-        e.preventDefault();
-      }}
-    >
-      <li onClick={handleClick} className={`${styles.item} ${isActive}`}>
+    <Link href={url}>
+      <li
+        onClick={handleClick}
+        className={`${styles.item} ${isActive ? styles.active : ""}`}
+      >
         {itemContent}
       </li>
     </Link>

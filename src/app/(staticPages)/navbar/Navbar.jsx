@@ -1,24 +1,22 @@
 "use client";
 import styles from "./Navbar.module.css";
+// Import Components
+import Aside from "@/components/aside/Aside";
 import Logo from "@/components/logo/Logo";
 import NavItem from "@/components/navItem/NavItem";
 import Search from "@/components/search/Search";
 import ToggleIcon from "@/components/toggleIcon/ToggleIcon";
+// Import hooks
 import { useState } from "react";
 import { useLinks } from "@/contexts/linksContexts/LinksContext";
 
 const Navbar = () => {
   // import all data links from context provider
-  const { links } = useLinks();
-
-  // Make Links dynamically active
-  const [activeStatus, setActiveStatus] = useState(null);
-  function handleChangeActive(newActiveStatus) {
-    setActiveStatus(newActiveStatus);
-  }
+  const { links, activeStatus, handleChangeActive } = useLinks();
 
   return (
     <header className={styles.header}>
+      <Aside />
       <nav className={styles.nav}>
         {/* Logo Icon */}
         <Logo />
@@ -37,7 +35,10 @@ const Navbar = () => {
 
         {/* Search Icon, Search Input, and Toggle Icon */}
         <div className={styles.layoutIcons}>
+          {/* Search Box  */}
           <Search />
+
+          {/* Toggle Icon */}
           <ToggleIcon />
         </div>
       </nav>

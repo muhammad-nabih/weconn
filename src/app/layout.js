@@ -4,6 +4,9 @@ import "./globals.css";
 import Navbar from "./(staticPages)/navbar/Navbar";
 import Lightness from "@/components/lightness/Lightness";
 import LinksProvider from "@/contexts/linksContexts/LinksContext";
+// Context Provider import
+import AsideProvider from "@/contexts/asideContext/AsideContext";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -14,13 +17,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <LinksProvider>
-        <body className={inter.className}>
-          <Lightness />
-          <Navbar />
-          {children}
-        </body>
-      </LinksProvider>
+        <LinksProvider>
+      <AsideProvider>
+          <body className={inter.className}>
+            <Lightness />
+            <Navbar />
+            {children}
+          </body>
+      </AsideProvider>
+        </LinksProvider>
     </html>
   );
 }
