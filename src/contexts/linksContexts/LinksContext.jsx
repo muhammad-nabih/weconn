@@ -1,7 +1,9 @@
 "use client";
 import { useContext, createContext, useState } from "react";
+
 // save create context in constant
 const LinksContext = createContext();
+
 // make custom hook instead of use context hook
 export const useLinks = () => useContext(LinksContext);
 

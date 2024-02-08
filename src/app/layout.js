@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 // import All Components
-import Navbar from "./(staticPages)/navbar/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import Lightness from "@/components/lightness/Lightness";
 import LinksProvider from "@/contexts/linksContexts/LinksContext";
 // Context Provider import

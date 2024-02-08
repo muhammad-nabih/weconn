@@ -1,7 +1,7 @@
 import styles from "./Aside.module.css";
 import { useLinks } from "@/contexts/linksContexts/LinksContext";
 import Image from "next/image";
-import NavItem from "../navItem/NavItem";
+import NavItem from "@/components/navItem/NavItem";
 import { useAside } from "@/contexts/asideContext/AsideContext";
 import { useEffect } from "react";
 const Aside = () => {
