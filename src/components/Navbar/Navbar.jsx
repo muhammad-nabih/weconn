@@ -1,13 +1,13 @@
 "use client";
 import styles from "./Navbar.module.css";
+// Import hooks
+import { useLinks } from "@/contexts/linksContexts/LinksContext";
 // Import Components
 import Aside from "@/components/aside/Aside";
 import Logo from "@/components/logo/Logo";
 import NavItem from "@/components/navItem/NavItem";
-import Search from "@/components/search/Search";
 import ToggleIcon from "@/components/toggleIcon/ToggleIcon";
-// Import hooks
-import { useLinks } from "@/contexts/linksContexts/LinksContext";
+import Search from "@/components/search/Search";
 
 const Navbar = () => {
   // import all data links from context provider

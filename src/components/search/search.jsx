@@ -1,18 +1,23 @@
-"use client";
-
+// Import the necessary modules
 import Image from "next/image";
 import styles from "./search.module.css";
 import { useState } from "react";
 
+// Define the Search component
 const Search = () => {
   // State to manage input display
   const [inputShow, setInputShow] = useState(false);
+
+  // Function to toggle input display
+  const toggleInput = () => {
+    setInputShow((prevState) => !prevState); // Toggle inputShow state
+  };
 
   return (
     <div className={styles.searchBox}>
       {/* Search input */}
       <input
-        // Show input if inputShow is true
+        // Set display based on inputShow state
         style={{ display: inputShow ? "block" : "none" }}
         type="search"
         placeholder="What Do You Need"
@@ -21,15 +26,14 @@ const Search = () => {
 
       {/* Search icon */}
       <div
+        // Set border color based on inputShow state
         style={{
           borderColor: inputShow
-            ? "var(  --link-hoverColor)"
+            ? "var(--link-hoverColor)"
             : "rgba(255, 255, 255, 0.08)",
         }}
         className={styles.searchIcon}
-        onClick={() => {
-          setInputShow((inputShow) => !inputShow); // Toggle inputShow state on click
-        }}
+        onClick={toggleInput} // Toggle input on click
       >
         {/* Search Image */}
         <Image
@@ -44,4 +48,5 @@ const Search = () => {
   );
 };
 
+// Export the Search component
 export default Search;
