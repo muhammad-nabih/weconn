@@ -1,3 +1,4 @@
+"use client";
 // Import the necessary modules
 import Image from "next/image";
 import styles from "./search.module.css";
