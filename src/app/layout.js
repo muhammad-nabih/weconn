@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 // import All Components
-import Navbar from "../components/Navbar/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 import Lightness from "@/components/lightness/Lightness";
 import LinksProvider from "@/contexts/linksContexts/LinksContext";
 // Context Provider import
@@ -17,15 +17,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-        <LinksProvider>
-      <AsideProvider>
+      <LinksProvider>
+        <AsideProvider>
           <body className={inter.className}>
             <Lightness />
             <Navbar />
             {children}
           </body>
-      </AsideProvider>
-        </LinksProvider>
+        </AsideProvider>
+      </LinksProvider>
     </html>
   );
 }
