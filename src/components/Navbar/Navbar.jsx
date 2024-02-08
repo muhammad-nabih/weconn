@@ -7,7 +7,7 @@ import Aside from "@/components/aside/Aside";
 import Logo from "@/components/logo/Logo";
 import NavItem from "@/components/navItem/NavItem";
 import ToggleIcon from "@/components/toggleIcon/ToggleIcon";
-// import Search from "@/components/search/Search";
+import SearchBar from "@/components/searchBar/SearchBar";
 
 const Navbar = () => {
   // import all data links from context provider
@@ -35,7 +35,7 @@ const Navbar = () => {
         {/* Search Icon, Search Input, and Toggle Icon */}
         <div className={styles.layoutIcons}>
           {/* Search Box  */}
-          {/* <Search /> */}
+          <SearchBar />
 
           {/* Toggle Icon */}
           <ToggleIcon />

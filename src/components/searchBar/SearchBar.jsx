@@ -5,7 +5,7 @@ import styles from "./search.module.css";
 import { useState } from "react";
 
 // Define the Search component
-const Search = () => {
+const SearchBar = () => {
   // State to manage input display
   const [inputShow, setInputShow] = useState(false);
 
@@ -34,7 +34,7 @@ const Search = () => {
             : "rgba(255, 255, 255, 0.08)",
         }}
         className={styles.searchIcon}
-        onClick={toggleInput} // Toggle input on click
+        onClick={toggleInput} 
       >
         {/* Search Image */}
         <Image
@@ -50,4 +50,4 @@ const Search = () => {
 };
 
 // Export the Search component
-export default Search;
+export default SearchBar;
