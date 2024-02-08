@@ -17,14 +17,12 @@ const NavItem = ({
   };
 
   return (
-    <Link href={url}>
-      <li
-        onClick={handleClick}
-        className={`${styles.item} ${isActive ? styles.active : ""}`}
-      >
-        {itemContent}
-      </li>
-    </Link>
+    <li
+      onClick={handleClick}
+      className={`${styles.item} ${isActive ? styles.active : ""}`}
+    >
+      <Link href={url}>{itemContent}</Link>
+    </li>
   );
 };
 

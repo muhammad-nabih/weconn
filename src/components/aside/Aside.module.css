@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: left .5s ease-in-out ;
+    transition: left .5s ease-in-out;
 
 }
 
@@ -66,7 +66,7 @@
 
 /* End Links */
 .footer {
-    color: rgba(255, 255, 255, 0.40);
+    color: rgb(255 255 255 / 54%);
     font-family: Poppins;
     font-size: 0.75rem;
     font-style: normal;
