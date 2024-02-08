@@ -7,7 +7,6 @@ import NavItem from "@/components/navItem/NavItem";
 import Search from "@/components/search/Search";
 import ToggleIcon from "@/components/toggleIcon/ToggleIcon";
 // Import hooks
-import { useState } from "react";
 import { useLinks } from "@/contexts/linksContexts/LinksContext";
 
 const Navbar = () => {

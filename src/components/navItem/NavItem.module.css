@@ -8,7 +8,7 @@
     transition: var(--main-transition);
 }
 
-/* ul> .item:hover,
-ul> .item.active {
+ul .item:hover,
+ul .item.active {
     color: var(--link-hoverColor)
-} */
+}

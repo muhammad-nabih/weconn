@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./ToggleIcon.module.css";
 import { useAside } from "@/contexts/asideContext/AsideContext";
 const ToggleIcon = () => {
-  const { showAside, setShowAside } = useAside();
+  const { setShowAside } = useAside();
   return (
     <>
       <div

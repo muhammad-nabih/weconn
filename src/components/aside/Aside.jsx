@@ -6,9 +6,7 @@ import { useAside } from "@/contexts/asideContext/AsideContext";
 import { useEffect } from "react";
 const Aside = () => {
   const { links, activeStatus, handleChangeActive } = useLinks();
-
   const { showAside, setShowAside } = useAside();
-
   return (
     <aside className={styles.aside} style={{ left: showAside ? "0%" : "100%" }}>
       <div className={styles.frame}>

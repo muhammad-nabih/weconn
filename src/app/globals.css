@@ -32,10 +32,4 @@ body {
   background-color: var(--main-bgColor);
   color: var(--main-forColor);
   font-family: 'Poppins', sans-serif;
-  /* height: 1000rem; */
-}
-
-header  ul li:hover,
-header  ul li.active {
-  color: var(--link-hoverColor)
 }
