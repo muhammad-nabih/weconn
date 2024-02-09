@@ -18,6 +18,7 @@ export default function LinksProvider({ children }) {
 
   // Make Links dynamically active
   const [activeStatus, setActiveStatus] = useState(null);
+  
   function handleChangeActive(newActiveStatus) {
     setActiveStatus(newActiveStatus);
   }

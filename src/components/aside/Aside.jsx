@@ -3,7 +3,7 @@ import { useLinks } from "@/contexts/linksContexts/LinksContext";
 import Image from "next/image";
 import NavItem from "@/components/navItem/NavItem";
 import { useAside } from "@/contexts/asideContext/AsideContext";
-import { useEffect } from "react";
+
 const Aside = () => {
   const { links, activeStatus, handleChangeActive } = useLinks();
   const { showAside, setShowAside } = useAside();
