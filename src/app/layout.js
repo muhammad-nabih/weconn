@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 // import All Components
 import Navbar from "@/components/Navbar/Navbar";
@@ -7,7 +7,10 @@ import LinksProvider from "@/contexts/linksContexts/LinksContext";
 // Context Provider import
 import AsideProvider from "@/contexts/asideContext/AsideContext";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata = {
   title: "Weconn",
@@ -19,7 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <LinksProvider>
         <AsideProvider>
-          <body className={inter.className}>
+          <body className={poppins.className}>
             <Lightness />
             <Navbar />
             {children}
