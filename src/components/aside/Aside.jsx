@@ -26,16 +26,7 @@ const Aside = () => {
         </div>
         {/* Links  */}
         <ul className={styles.links}>
-          {links.map((link) => {
-            return (
-              <NavItem
-                handleChangeActive={handleChangeActive}
-                key={link.id}
-                {...link}
-                isActive={link.id === activeStatus ? "active" : ""}
-              />
-            );
-          })}
+          <NavItem />
         </ul>
         {/* footer */}
         <footer className={styles.footer}>Copyright © 2023 YAL GAMERS</footer>

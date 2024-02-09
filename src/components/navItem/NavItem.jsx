@@ -3,38 +3,38 @@ import { useEffect } from "react";
 // Import necessary modules
 import styles from "./NavItem.module.css";
 import Link from "next/link";
+import { useLinks } from "@/contexts/linksContexts/LinksContext";
 
-const NavItem = ({
-  itemContent,
-  url,
-  catchLinkById,
-  isActive,
-  handleChangeActive,
-}) => {
-  // Function to handle click on the item
-  const handleClick = () => {
-    // Calling the provided function to change the active item
-    handleChangeActive(catchLinkById);
-    //add link active to local storage
-    localStorage.setItem("linkId", catchLinkById);
-  };
+const NavItem = () => {
+  // import all data links from context provider
+  const { links, activeLink, setActiveLink } = useLinks();
+
+  // giv the url target
+  function handleClickLink(url) {
+    setActiveLink(url);
+    localStorage.setItem("activeLink", url);
+  }
 
   useEffect(() => {
-    const storedLinkId = localStorage.getItem("linkId");
-    if (storedLinkId) {
-      handleChangeActive(parseInt(storedLinkId));
-    } else {
-      handleChangeActive(1);
+    const isActive = localStorage.getItem("activeLink");
+    if (isActive) {
+      setActiveLink(isActive);
     }
-  }, [handleChangeActive]);
-
+  }, [setActiveLink]);
   return (
-    <li
-      onClick={handleClick}
-      className={`${styles.item} ${isActive ? styles.active : ""}`}
-    >
-      <Link href={url}>{itemContent}</Link>
-    </li>
+    <>
+      {links.map((link) => (
+        <li
+          key={link.id}
+          onClick={() => handleClickLink(link.url)}
+          className={`${styles.item} ${
+            link.url === activeLink ? styles.active : ""
+          }`}
+        >
+          <Link href={link.url}>{link.itemContent}</Link>
+        </li>
+      ))}
+    </>
   );
 };
 
