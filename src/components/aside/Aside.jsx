@@ -21,7 +21,7 @@ const Aside = () => {
               setShowAside(false);
             }}
           >
-            <Image src={"/images/close.svg"} alt="Logo" fill />
+            <Image src={"/images/close.svg"} alt="Close Icon" fill />
           </div>
         </div>
         {/* Links  */}
