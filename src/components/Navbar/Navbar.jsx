@@ -9,19 +9,53 @@ import NavItem from "@/components/navItem/NavItem";
 import ToggleIcon from "@/components/toggleIcon/ToggleIcon";
 import SearchBar from "@/components/searchBar/SearchBar";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import LinksProvider from "@/contexts/linksContexts/LinksContext";
+
 const Navbar = () => {
-  // import all data links from context provider
+  // Import all data links from context provider
   const { setActiveLink } = useLinks();
+  const [scrollY, setScrollY] = useState(0);
+  const [headerHeight, setHeaderHeight] = useState(0);
+
+  // Change Navbar background color when scrolling
+  useEffect(() => {
+    // Function to set scroll position when scrolling
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    // Get Header Element Offset
+    const header = document.querySelector("header");
+    // Check if header element exists
+    if (header) {
+      setHeaderHeight(header.offsetHeight);
+    }
+
+    // Add scroll event listener and callback function handleScroll
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove scroll event listener when component unmounts
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${
+        scrollY > headerHeight ? styles.scrolled : ""
+      }`}
+    >
       <Aside />
       <nav className={styles.nav}>
         {/* Logo Icon */}
-        <Link href={"/"} onClick={() => setActiveLink("/")}>
+        <Link
+          href={"/"}
+          onClick={() => {
+            setActiveLink("/");
+            localStorage.setItem("activeLink", "/");
+          }}
+        >
           <Logo />
         </Link>
 
@@ -41,3 +75,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+

@@ -1,0 +1,17 @@
+.break-mobile {
+    display: none;
+}
+
+
+@media (max-width: 767px) {
+
+    br.break {
+        display: none ;
+        ;
+    }
+
+    br.break-mobile {
+        display: block;
+    }
+
+}

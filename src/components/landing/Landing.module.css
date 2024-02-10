@@ -1,0 +1,218 @@
+.landing {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 6.2294rem);
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.textInfo {
+    width: calc(100% - 15rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+
+}
+
+.headText {
+    color: var(--main-forColor);
+    color: #FFF;
+    font-size: 2.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0 auto;
+
+}
+
+.description {
+    color: var(--paragraph-forColor);
+    font-family: Poppins;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    text-transform: capitalize;
+
+}
+
+.flowerContainer,
+.womanContainer {
+    position: absolute;
+    z-index: -1;
+}
+
+.flowerContainer {
+    width: 13.75rem;
+    height: 19rem;
+    top: 0;
+    left: 0;
+
+}
+
+.womanContainer {
+    position: absolute;
+    width: 13.1875rem;
+    height: 19.0625rem;
+    right: .5rem;
+    bottom: 0;
+
+}
+
+@media (min-width: 768px) and (max-width:1185px) {
+    .textInfo {
+        width: calc(100% - 3rem) !important;
+        width: 100%
+    }
+
+    .headText {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .flowerContainer,
+    .womanContainer {
+        width: 8rem;
+        height: 12rem;
+    }
+
+
+
+
+    .flowerContainer {
+        left: 0rem;
+
+        top: 3rem;
+    }
+
+    .womanContainer {
+        right: -2.5rem;
+        bottom: 3.5rem;
+    }
+
+
+
+}
+
+@media (max-width: 767px) {
+    .textInfo {
+        text-align: left;
+        padding: 0;
+        width: calc(100% - 2rem);
+
+    }
+
+    .headText {
+        font-size: 2.125rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .description {
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .flowerContainer,
+    .womanContainer {
+        width: 7.4375rem;
+        height: 10.3125rem;
+    }
+
+
+
+
+    .flowerContainer {
+        top: 73%;
+        left: -0.1rem;
+    }
+
+    .womanContainer {
+
+        top: 0.75rem;
+        left: 76%;
+    }
+
+
+}
+
+
+
+/* 
+ @media (min-width:1200px) {
+    /* hi-res laptops and desktops */
+/* .landing { 
+    position: relative;
+    width: calc(100% - 20.64rem);
+    top: 7.44rem;
+    left: 15.2rem;
+    padding: 6.69rem 19.1rem 9.75rem 15.8rem;
+}
+
+.flowerContainer {
+    position: absolute;
+    left: -0.6rem;
+    bottom: 11.2rem;
+    width: 15.75rem;
+    height: 21rem;
+    flex-shrink: 0;
+    stroke-width: 2px;
+    stroke: #A1A7B8;
+}
+
+.womanContainer {
+    position: absolute;
+    top: 11.1rem;
+    left: 80rem;
+    width: 15.1875rem;
+    height: 21.0625rem;
+}
+
+.textInfo {
+    display: flex;
+    width: 64.4375rem;
+    height: 15.75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.headText {
+    color: var(--main-forColor);
+    text-align: center;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.description {
+    color: var(--paragraph-forColor);
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 2rem;
+    text-transform: capitalize;
+}
+
+
+
+}*/

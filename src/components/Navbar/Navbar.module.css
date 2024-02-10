@@ -4,6 +4,12 @@
     top: 0;
     border: 1px solid transparent;
     z-index: 1000000;
+    background-color: transparent;
+    transition: background-color var(--main-transition) ease;
+}
+
+header.scrolled {
+    background-color: inherit;
 }
 
 .nav {

@@ -1,12 +1,12 @@
 .lightness {
     position: absolute;
-    opacity: .7;
+    opacity: 1;
     filter: blur(200px);
     top: -25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #294f7d;
-    z-index: -10;
+
+
 }
 
 .imageContainer {
