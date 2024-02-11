@@ -31,7 +31,7 @@ export default function Landing() {
         <p className={styles.headText}>
           The Ultimate
           <br className="break-mobile" /> Guide To
-          <br className="break-mobile" />
+          <br className="break" />
           understanding Cryptocurrency
         </p>
         <p className={styles.description}>
