@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <header
       className={`${styles.header} ${
-        scrollY > headerHeight ? styles.scrolled : ""
+        scrollY > headerHeight  ? styles.scrolled : ""
       }`}
     >
       <Aside />
@@ -75,4 +75,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

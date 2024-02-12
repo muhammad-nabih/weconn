@@ -1,32 +1,40 @@
 import Image from "next/image";
 import styles from "./ArticleCard.module.css";
+import Link from "next/link";
 
-const ArticleCard = () => {
+const ArticleCard = ({ product }) => {
+  const { id, description, rating, brand, category, thumbnail } = product;
+  const TheLevel =
+    rating > 4.5
+      ? "Hard"
+      : rating < 4.2
+      ? "Beginner"
+      : rating <= 4.5 && rating >= 4.2
+      ? "Medium"
+      : "";
   return (
-    <div className={styles.frame}>
-      <div className={styles["overlap-group"]}>
-        <Image src={"/images/cardImage.png"} fill={true} alt="image card" />
-        <div className={styles.div}>
-          <div className={styles.rectangle} />
-          <div className={styles.level}>BEGINNER</div>
+    <Link href={`articles/${id}`}>
+      <div className={styles.card}>
+        <div className={styles.level}>
+          <span className={styles.bullet}></span>
+          <span className={styles.levelWord}>{TheLevel}</span>
+        </div>
+
+        {/* Image Box  */}
+        <div className={styles.imageContainer}>
+          <Image src={thumbnail} alt={description} layout="fill" />
+        </div>
+        <p className={styles.description}>{description}</p>
+        <div className={styles.topicBox}>
+          <span className={styles.topic}>{category}</span>
+          <span className={styles.topic}>{brand}</span>
+        </div>
+        <hr className={styles.line} />
+        <div className={styles.footerCard}>
+          by: <span className={styles.rae}>Rae</span>
         </div>
       </div>
-      <p className={styles["desert-whales"]}>
-        Desert Whales Academy Opens A Way To Learn The Future Technologies
-      </p>
-      <div className={styles["div-wrapper"]}>
-        <div className={styles["text-wrapper"]}>Crypto</div>
-      </div>
-      <div className={styles["div-wrapper-2"]}>
-        <div className={styles["text-wrapper"]}>Blockchain</div>
-      </div>
-      <hr className={styles.line} />
-      <p className={styles["by-rae"]}>
-        <span className={styles.span}>by:</span>
-        <span className={styles["text-wrapper-2"]}>&nbsp;</span>
-        <span className={styles["text-wrapper-3"]}>Rae</span>
-      </p>
-    </div>
+    </Link>
   );
 };
 
