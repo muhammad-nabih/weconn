@@ -37,3 +37,4 @@ next-env.d.ts
 
 # Plugin files for Workspace
 /.vscode
+/ToolHelper
