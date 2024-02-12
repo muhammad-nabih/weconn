@@ -13,7 +13,7 @@ const ArticleCard = ({ product }) => {
       ? "Medium"
       : "";
   return (
-    <Link href={`articles/${id}`}>
+    <Link href={`articles/${id}` } style={{margin:"0 auto"}}>
       <div className={styles.card}>
         <div className={styles.level}>
           <span className={styles.bullet}></span>
