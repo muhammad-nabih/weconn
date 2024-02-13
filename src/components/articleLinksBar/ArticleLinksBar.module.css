@@ -45,3 +45,12 @@
     font-weight: 500;
     line-height: normal;
 }
+
+@media (max-width: 768px) {
+
+    .articles,
+    .pForward {
+        font-size: 14px;
+
+    }
+}
