@@ -1,9 +1,8 @@
 .articlesContainer {
     display: flex;
- 
     margin: 3.75rem auto;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 30px 25px
 }
 
