@@ -31,6 +31,10 @@ body {
   color: var(--main-forColor);
 }
 
+* {
+  font-family: Poppins;
+}
+
 ::selection {
   color: #e4e6e5;
   background-color: #c89c64;

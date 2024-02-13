@@ -1,0 +1,47 @@
+.containerLinks {
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.links {
+    width: 91.88888%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.imageContainerBack,
+.imageContainerForward {
+    position: absolute;
+    cursor: pointer;
+}
+
+.imageContainerBack {
+    left: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.imageContainerForward {
+    left: 123px;
+    width: 16px;
+    height: 16px;
+}
+
+.articles {
+    margin: 0 46px 0 34px;
+    color: var(--main-forColor);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.pForward {
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+}

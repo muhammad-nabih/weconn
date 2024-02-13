@@ -4,6 +4,7 @@ import Link from "next/link";
 
 const ArticleCard = ({ product }) => {
   const { id, description, rating, brand, category, thumbnail } = product;
+
   const TheLevel =
     rating > 4.5
       ? "Hard"
@@ -12,17 +13,25 @@ const ArticleCard = ({ product }) => {
       : rating <= 4.5 && rating >= 4.2
       ? "Medium"
       : "";
+
   return (
-    <Link href={`articles/${id}` } style={{margin:"0 auto"}}>
+    <Link href={`articles/${id}`} style={{ margin: "0 auto" }}>
       <div className={styles.card}>
         <div className={styles.level}>
           <span className={styles.bullet}></span>
           <span className={styles.levelWord}>{TheLevel}</span>
         </div>
 
-        {/* Image Box  */}
+        {/* Image Box */}
         <div className={styles.imageContainer}>
-          <Image src={thumbnail} alt={description} layout="fill" />
+          <Image
+            src={thumbnail}
+            alt={description}
+            width={320}
+            height={320}
+            layout="responsive"
+            objectFit="cover" // Updated to the latest objectFit property
+          />
         </div>
         <p className={styles.description}>{description}</p>
         <div className={styles.topicBox}>

@@ -71,7 +71,7 @@
 
 .topicBox {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     width: calc(100% - 12px);
     align-items: center;
     gap: 10px;
@@ -107,7 +107,7 @@
 
 .footerCard {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     margin: 10px 6px 6px 6px;
     width: calc(100% - 12px);
