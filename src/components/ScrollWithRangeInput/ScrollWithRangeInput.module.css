@@ -1,12 +1,14 @@
 /* ScrollWithRangeInput.module.css */
 .container {
     position: sticky;
+    height: 30px;
     top: 99px;
     width: 100%;
     margin: 30px auto;
     left: 0;
     padding: 8px 0;
-    z-index: 1000;
+
+
 
 }
 
@@ -19,10 +21,15 @@
 
 .containProgress {
     width: 50%;
+    height: inherit;
     margin: 0 auto;
     position: relative;
     border-radius: 100px;
     padding: 4px 0;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
 }
 
 .rangeInput {
@@ -30,7 +37,8 @@
     margin: 0 auto;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     height: 6px;
     width: 100%;
     -webkit-appearance: none;
@@ -47,7 +55,8 @@
     z-index: -1;
     position: absolute;
     left: 0%;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     border-radius: inherit;
 }
 
