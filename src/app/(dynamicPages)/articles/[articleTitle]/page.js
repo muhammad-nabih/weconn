@@ -20,7 +20,7 @@ const ArticleDetails = () => {
               objectFit="cover"
               width={2000}
               height={2000}
-
+              priority={true}
             />
           </div>
 

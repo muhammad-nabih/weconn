@@ -7,9 +7,6 @@
     margin: 30px auto;
     left: 0;
     padding: 8px 0;
-
-
-
 }
 
 @media(max-width:767px) {
@@ -30,6 +27,12 @@
     left: 0;
     transform: translateY(-50%);
 
+}
+
+@media (max-width:960px) {
+    .containProgress {
+        width: calc(100% - 48px);
+    }
 }
 
 .rangeInput {
