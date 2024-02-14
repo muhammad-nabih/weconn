@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import styles from "./SizeReading.module.css";
+import styles from "./SizeReadingText.module.css";
 import { useState, useEffect } from "react";
 
 export default function SizeReading() {
