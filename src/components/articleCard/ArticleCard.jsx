@@ -29,8 +29,7 @@ const ArticleCard = ({ product }) => {
             alt={description}
             width={320}
             height={320}
-            layout="responsive"
-            objectFit="cover" // Updated to the latest objectFit property
+ // Updated to the latest objectFit property
           />
         </div>
         <p className={styles.description}>{description}</p>
