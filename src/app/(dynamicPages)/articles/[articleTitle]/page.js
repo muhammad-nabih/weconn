@@ -1,7 +1,7 @@
 import styles from "./Article.module.css";
 import ScrollWithRangeInput from "@/components/ScrollWithRangeInput/ScrollWithRangeInput";
 import ArticleLinksBar from "@/components/articleLinksBar/ArticleLinksBar";
-import SizeReading from "@/components/sizeReading/sizeReading";
+import SizeReading from "@/components/sizeReading/SizeReadingText";
 import Image from "next/image";
 
 const ArticleDetails = () => {
