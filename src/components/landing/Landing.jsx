@@ -10,7 +10,7 @@ export default function Landing() {
           src={"/images/flowers.png"}
           width={300}
           height={500}
-          objectFit="contain"
+         
           priority={true}
           alt="Flowers"
         />
@@ -20,7 +20,7 @@ export default function Landing() {
           src={"/images/women.png"}
           width={300}
           height={500}
-          objectFit="contain"
+
           priority={true}
           alt="Woman Read"
         />

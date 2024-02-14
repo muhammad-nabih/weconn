@@ -5,29 +5,32 @@
 
 .links {
     width: 91.88888%;
-    margin: 0 auto;
+    margin: 30px auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     position: relative;
+   
 }
 
 .imageContainerBack,
 .imageContainerForward {
     position: absolute;
     cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .imageContainerBack {
     left: 0;
-    width: 24px;
-    height: 24px;
+    width: 12.049px;
+    height: 15px;
 }
 
 .imageContainerForward {
     left: 123px;
-    width: 16px;
-    height: 16px;
+    width: 9.333px;
+    height: 7.667px;
 }
 
 .articles {
@@ -52,5 +55,9 @@
     .pForward {
         font-size: 14px;
 
+    }
+
+    .imageContainerForward {
+        left: 106px;
     }
 }

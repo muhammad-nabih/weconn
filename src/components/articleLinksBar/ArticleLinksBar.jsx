@@ -16,19 +16,11 @@ export default function ArticleLinksBar() {
       <div className={styles.links}>
         <p className={styles.articles}>Articles</p>
         <div className={styles.imageContainerBack} onClick={backHandler}>
-          <Image
-            src={"/images/Arrow - Left.svg"}
-            layout="fill"
-            alt="Arrow Left "
-          />
+          <Image src={"/images/Arrow - Left.svg"} fill alt="Arrow Left " />
         </div>
 
         <div className={styles.imageContainerForward} onClick={forwardHandler}>
-          <Image
-            src={"/images/Arrow - Right 2.svg"}
-            layout="fill"
-            alt="Arrow Left "
-          />
+          <Image src={"/images/Arrow - Right 2.svg"} fill alt="Arrow Left " />
         </div>
 
         <p className={styles.pForward}>Desert whales acade...</p>

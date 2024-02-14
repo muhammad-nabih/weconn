@@ -1,0 +1,61 @@
+.reading {
+    display: flex;
+    width: 50%;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+
+}
+
+.sizeBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.smallContainer,
+.mediumContainer,
+.largeContainer {
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color var(--main-transition) ease-in-out;
+}
+
+
+
+.smallContainer {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+
+}
+
+.mediumContainer {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.largeContainer {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+}
+
+.share {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+
+.mediumContainer.active,
+.smallContainer.active,
+.largeContainer.active {
+    background: rgba(255, 255, 255, 0.10);
+}

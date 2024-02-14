@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 // Import CSS styles
 import styles from "./ScrollWithRangeInput.module.css";
