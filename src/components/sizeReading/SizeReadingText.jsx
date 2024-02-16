@@ -2,10 +2,9 @@
 import Image from "next/image";
 import styles from "./SizeReadingText.module.css";
 import { useState, useEffect } from "react";
-
+import { useSizeReading } from "@/contexts/sizeContext/SizeContext";
 export default function SizeReading() {
-  const [textSize, setTextSize] = useState("medium");
-
+  const { textSize, setTextSize } = useSizeReading();
   // Array of sizes
   const sizes = [
     { size: "small", className: styles.smallContainer },
@@ -22,6 +21,7 @@ export default function SizeReading() {
   }, []);
   return (
     <section className={styles.reading}>
+      {/* All Icon For Sizing Reading */}
       <div className={styles.sizeBox}>
         {sizes.map((item, index) => (
           <div
@@ -44,6 +44,8 @@ export default function SizeReading() {
           </div>
         ))}
       </div>
+
+      {/* Share Icon */}
       <div className={styles.share}>
         <Image
           src={"/images/share.svg"}
