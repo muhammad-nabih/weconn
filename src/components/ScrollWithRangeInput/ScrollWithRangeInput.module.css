@@ -1,4 +1,3 @@
-/* ScrollWithRangeInput.module.css */
 .container {
     position: sticky;
     height: 30px;
@@ -7,6 +6,8 @@
     margin: 30px auto;
     left: 0;
     padding: 8px 0;
+
+
 }
 
 @media(max-width:767px) {
@@ -48,7 +49,6 @@
     appearance: none;
     background: transparent;
     cursor: pointer;
-
 }
 
 .progress {
@@ -63,32 +63,21 @@
     border-radius: inherit;
 }
 
-
-
-
-
-
 .rangeInput::-webkit-slider-runnable-track {
     height: 6px;
     border-radius: 100px;
     background: rgba(255, 255, 255, 0.10);
 }
 
-
-
-
 .rangeInput::-webkit-slider-thumb {
     -webkit-appearance: none;
-    /* Override default look */
     appearance: none;
-    /* Centers thumb on the track */
     height: 20px;
     width: 20px;
     border-radius: 50%;
     margin-top: -8px;
     background-color: var(--main-bgColor);
-    background: linear-gradient(var(--main-bgColor), var(--main-bgColor)) padding-box,
-        linear-gradient(to right, rgb(58, 96, 219) 0%, rgb(84, 209, 167) 100%) border-box;
+    background: linear-gradient(var(--main-bgColor), var(--main-bgColor)) padding-box, linear-gradient(180deg, rgb(58, 96, 219) 0%, rgb(84, 209, 167) 100%) border-box;
     border: 5px solid transparent;
     border-radius: 50px;
 }
@@ -96,5 +85,4 @@
 .rangeInput::-moz-range-progress {
     background-image: linear-gradient(to right, rgb(58, 96, 219) 0%, rgb(84, 209, 167) 100%);
     height: inherit;
-    ;
 }
