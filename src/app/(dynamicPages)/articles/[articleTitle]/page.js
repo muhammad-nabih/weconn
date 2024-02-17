@@ -6,14 +6,14 @@ import SizeReading from "@/components/sizeReading/SizeReadingText";
 import SizeProvider from "@/contexts/sizeContext/SizeContext";
 import Image from "next/image";
 
-const ArticleDetails = () => {
+const ArticleDetails = ({ params }) => {
   return (
     <>
       <ArticleLinksBar />
       <ScrollWithRangeInput />
       <SizeProvider>
         <SizeReading />
-        <ArticleInfo />
+        <ArticleInfo params={params} />
       </SizeProvider>
     </>
   );

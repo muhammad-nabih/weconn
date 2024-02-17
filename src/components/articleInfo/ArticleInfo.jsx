@@ -1,56 +1,93 @@
 "use client";
+// Import statements
 import styles from "./ArticleInfo.module.css";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useSizeReading } from "@/contexts/sizeContext/SizeContext";
 import { dataArticles } from "@/data/articleData";
-export default function ArticleInfo() {
-  const { textSize } = useSizeReading();
-  const [sizeTextStyle, setSizeTextStyle] = useState({
+
+// ArticleInfo component
+export default function ArticleInfo({ params }) {
+  const articleTitle = params.articleTitle || "";
+  // Constants for text sizes
+  const textSizeStyles = {
     h3Lg: "25px",
     h3Sm: "19px",
     pLg: "17px",
     pSm: "11px",
-  });
+  };
+
+  // State variables
+  const { textSize } = useSizeReading();
+  const { h3Lg, h3Sm, pLg, pSm } = textSizeStyles;
+  const [articleInfo, setArticleInfo] = useState({});
+
+  // Fetching article information
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://dummyjson.com/products/${articleTitle}`
+        );
+        if (!response.ok) throw new Error("Fetching article data failed");
+        setArticleInfo(await response.json());
+      } catch (error) {
+        console.error("Error fetching article info:", error);
+      }
+    };
+    fetchData();
+  }, [articleTitle]);
+  const {
+    id,
+    title,
+    description,
+    price,
+    stock,
+    rating,
+    brand,
+    category,
+    thumbnail,
+  } = articleInfo;
 
   return (
     <article className={styles.article}>
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           <Image
-            src={"/images/cardImage.svg"}
+            src={articleInfo.thumbnail}
             alt="landing article"
             objectFit="cover"
             width={2000}
             height={2000}
-            priority={true}
           />
         </div>
 
         <div className={styles.articleDetails}>
           <div className="content">
-            <h2 className={styles.h2}>What is the metaverse?</h2>
+            <h2 className={styles.h2}> {title}</h2>
             <div className={styles.by}>
               by: <span className={styles.rae}>Rae</span>
             </div>
             <div className={styles.topics}>
-              <span className={styles.topic}> Crypto</span>
-              <span className={styles.topic}> Blockchain</span>
+              <span className={styles.topic}> {brand}</span>
+              <span className={styles.topic}> {category}</span>
             </div>
           </div>
-          <div className={styles.minute}>7 Minutes </div>
+          <div className={styles.minute}>{rating} Minutes </div>
         </div>
+
+        {/*Article Info H3 + P */}
 
         <div className={styles.info}>
           {dataArticles.map((article, index) => (
-            <div key={index}>
+            <div key={index} className={styles.infoContent}>
               <h3
                 style={{
                   fontSize:
                     textSize === "large"
-                      ? sizeTextStyle.h3Lg
+                      ? h3Lg
                       : textSize === "small"
-                      ? sizeTextStyle.h3Sm
+                      ? h3Sm
                       : "",
                 }}
                 className={styles.title}
@@ -62,13 +99,15 @@ export default function ArticleInfo() {
                 style={{
                   fontSize:
                     textSize === "large"
-                      ? sizeTextStyle.pLg
+                      ? pLg
                       : textSize === "small"
-                      ? sizeTextStyle.pSm
+                      ? pSm
                       : "",
                 }}
               >
-                {article.description}
+                {description
+                  ? description.repeat(3)
+                  : "No description available"}
               </p>
             </div>
           ))}

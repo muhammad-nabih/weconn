@@ -10,7 +10,7 @@ import { Suspense } from "react";
 //     }, 2000);
 //   });
 // };
-const Articles = async ({params}) => {
+const Articles = async () => {
   const response = await fetch(`https://dummyjson.com/products`);
   const data = await response.json();
   const productsData = data.products;

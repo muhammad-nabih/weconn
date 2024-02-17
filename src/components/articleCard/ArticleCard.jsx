@@ -3,7 +3,7 @@ import styles from "./ArticleCard.module.css";
 import Link from "next/link";
 
 const ArticleCard = ({ product }) => {
-  const { id, description, rating, brand, category, thumbnail } = product;
+  const {  title, id, description, rating, brand, category, thumbnail } = product;
 
   const TheLevel =
     rating > 4.5
@@ -29,10 +29,10 @@ const ArticleCard = ({ product }) => {
             alt={description}
             width={320}
             height={320}
- // Updated to the latest objectFit property
+            // Updated to the latest objectFit property
           />
         </div>
-        <p className={styles.description}>{description}</p>
+        <p className={styles.description}>{title}</p>
         <div className={styles.topicBox}>
           <span className={styles.topic}>{category}</span>
           <span className={styles.topic}>{brand}</span>
