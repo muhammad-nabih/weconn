@@ -8,7 +8,7 @@ import { dataArticles } from "@/data/articleData";
 
 // ArticleInfo component
 export default function ArticleInfo({ params }) {
-  const articleTitle = params.articleTitle || "";
+  const articleTitle = params.articleTitle;
   // Constants for text sizes
   const textSizeStyles = {
     h3Lg: "25px",
@@ -38,7 +38,6 @@ export default function ArticleInfo({ params }) {
     fetchData();
   }, [articleTitle]);
   const {
-    id,
     title,
     description,
     price,
@@ -54,7 +53,7 @@ export default function ArticleInfo({ params }) {
       <div className={styles.container}>
         <div className={styles.imageContainer}>
           <Image
-            src={articleInfo.thumbnail}
+            src={thumbnail}
             alt="landing article"
             objectFit="cover"
             width={2000}

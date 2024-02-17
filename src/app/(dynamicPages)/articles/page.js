@@ -3,14 +3,8 @@ import styles from "./Articles.module.css";
 import ArticleCard from "@/components/articleCard/ArticleCard";
 import { Suspense } from "react";
 
-// const wait = async () => {
-//   new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve();
-//     }, 2000);
-//   });
-// };
-const Articles = async () => {
+
+const Articles = async ({params}) => {
   const response = await fetch(`https://dummyjson.com/products`);
   const data = await response.json();
   const productsData = data.products;

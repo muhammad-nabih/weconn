@@ -4,33 +4,19 @@ import { useEffect } from "react";
 import styles from "./NavItem.module.css";
 import Link from "next/link";
 import { useLinks } from "@/contexts/linksContexts/LinksContext";
-
+import { usePathname } from "next/navigation";
 const NavItem = () => {
-
   // import all data links from context provider
   const { links, activeLink, setActiveLink } = useLinks();
+  const pathname = usePathname();
 
-  function handleClickLink(url) {
-    setActiveLink(url);
-    localStorage.setItem("activeLink", url);
-  }
-
-  // use effect to set active link
-  useEffect(() => {
-    const isActive = localStorage.getItem("activeLink");
-
-    if (isActive) {
-      setActiveLink(isActive);
-    }
-  }, []);
   return (
     <>
       {links.map((link) => (
         <li
           key={link.id}
-          onClick={() => handleClickLink(link.url)}
           className={`${styles.item} ${
-            link.url === activeLink ? styles.active : ""
+            pathname === link.url ? styles.active : ""
           }`}
         >
           <Link href={link.url}>{link.itemContent}</Link>

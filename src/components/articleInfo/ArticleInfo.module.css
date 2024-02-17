@@ -12,6 +12,8 @@
     position: relative;
     width: 100%;
     z-index: -1;
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 
@@ -110,6 +112,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    
 }
 
 @media (max-width:960px) {

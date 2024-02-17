@@ -2,7 +2,7 @@
 import styles from "./Navbar.module.css";
 // Import hooks
 import { useLinks } from "@/contexts/linksContexts/LinksContext";
-
+import { useRouter } from "next/navigation";
 // Import Components
 import Aside from "@/components/aside/Aside";
 import Logo from "@/components/logo/Logo";
@@ -11,7 +11,6 @@ import ToggleIcon from "@/components/toggleIcon/ToggleIcon";
 import SearchBar from "@/components/searchBar/SearchBar";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
 const Navbar = () => {
   // Import all data links from context provider
   const { setActiveLink } = useLinks();
@@ -20,12 +19,6 @@ const Navbar = () => {
 
   // Change Navbar background color when scrolling
   useEffect(() => {
-
-    window.addEventListener("load", () => {
-      setActiveLink("/");
-      localStorage.setItem("activeLink", "/");
-    });
-
     // Function to set scroll position when scrolling
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -54,13 +47,7 @@ const Navbar = () => {
       <Aside />
       <nav className={styles.nav}>
         {/* Logo Icon */}
-        <Link
-          href={"/"}
-          onClick={() => {
-            setActiveLink("/");
-            localStorage.setItem("activeLink", "/");
-          }}
-        >
+        <Link href={"/"}>
           <Logo />
         </Link>
 

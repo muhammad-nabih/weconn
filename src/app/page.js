@@ -7,8 +7,8 @@ const Home = () => {
     <div>
       <Landing />
       <TitleSection url={"/news"} title={"latest News"} />
-      <TitleSection url={"/Articles"} title={"Articles"} />
-      <TitleSection url={"/IDOs"} title={"IDOs"} />
+      <TitleSection url={"/articles"} title={"Articles"} />
+      <TitleSection url={"/idos"} title={"IDOs"} />
     </div>
   );
 };
