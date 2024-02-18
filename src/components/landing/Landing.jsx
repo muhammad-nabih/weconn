@@ -1,8 +1,9 @@
 import "./landing.css";
 import styles from "./Landing.module.css";
 import Image from "next/image";
-
+import { TypewriterEffectSmooth } from "@/ui/typewriter-effect";
 export default function Landing() {
+  
   return (
     <section className={styles.landing}>
       <div className={styles.flowerContainer}>

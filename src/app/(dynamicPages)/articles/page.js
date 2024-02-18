@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./Articles.module.css";
 import ArticleCard from "@/components/articleCard/ArticleCard";
-import { PinContainer } from "@/AceternityUI/ui/3d-pin";
+import { PinContainer } from "@/ui/3d-pin";
 const Articles = async () => {
   const response = await fetch(`https://dummyjson.com/products`);
   const data = await response.json();
