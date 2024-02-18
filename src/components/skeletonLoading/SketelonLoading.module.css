@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.content {
+    width: 50%;
+
+    ;
+}
+
+.image {
+
+    display: flex;
+}
+
+.box {
+    display: flex;
+}
+
+.title {
+
+    position: relative;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+}

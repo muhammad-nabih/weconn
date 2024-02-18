@@ -15,11 +15,8 @@ export default function LinksProvider({ children }) {
     { id: 3, itemContent: "News", url: "/news" },
     { id: 4, itemContent: "IDOs", url: "/idos" },
   ]);
-  const [activeLink, setActiveLink] = useState("");
 
   return (
-    <LinksContext.Provider value={{ links, activeLink, setActiveLink }}>
-      {children}
-    </LinksContext.Provider>
+    <LinksContext.Provider value={{ links }}>{children}</LinksContext.Provider>
   );
 }

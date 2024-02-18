@@ -19,8 +19,10 @@
   --seeAll-color: #3C69D6;
   --asideBg: #16285F;
   --asideCoverBg: rgba(12, 21, 50, 0.80);
-  /* All Size For BorderRadius  */
-  --radiusCard: 0.5rem;
+  --baseColorSketelon: #3C486B;
+    --highlightColorSketelon:#516191;
+    /* All Size For BorderRadius  */
+    --radiusCard: 0.5rem;
   --RadiusTopic: 6.25rem;
   /* Transition */
   --main-transition: .3s;

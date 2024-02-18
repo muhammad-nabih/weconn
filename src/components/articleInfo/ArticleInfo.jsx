@@ -1,10 +1,10 @@
 "use client";
-// Import statements
-import styles from "./ArticleInfo.module.css";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import Image from "next/image";
+import styles from "./ArticleInfo.module.css";
 import { useSizeReading } from "@/contexts/sizeContext/SizeContext";
 import { dataArticles } from "@/data/articleData";
+import SkeletonLoading from "../skeletonLoading/SkeletonLoading";
 
 // ArticleInfo component
 export default function ArticleInfo({ params }) {
@@ -21,22 +21,37 @@ export default function ArticleInfo({ params }) {
   const { textSize } = useSizeReading();
   const { h3Lg, h3Sm, pLg, pSm } = textSizeStyles;
   const [articleInfo, setArticleInfo] = useState({});
+  const [isLoading, setIsLoading] = useState(true); // حالة التحميل
 
   // Fetching article information
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // await new Promise((resolve) => {
+        //   setTimeout(() => {
+        //     resolve();
+        //   }, 1000);
+        // });
+
         const response = await fetch(
-          `https://dummyjson.com/products/${articleTitle}`
+          `https://dummyjson.com/products/${articleTitle}`,
+          {
+            next: {
+              revalidate: 120,
+            },
+          }
         );
         if (!response.ok) throw new Error("Fetching article data failed");
-        setArticleInfo(await response.json());
+        const data = await response.json();
+        setArticleInfo(data);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching article info:", error);
       }
     };
     fetchData();
   }, [articleTitle]);
+
   const {
     title,
     description,
@@ -47,6 +62,11 @@ export default function ArticleInfo({ params }) {
     category,
     thumbnail,
   } = articleInfo;
+
+  // Show loading if data is still being fetched
+  if (isLoading) {
+    return <SkeletonLoading />;
+  }
 
   return (
     <article className={styles.article}>

@@ -1,8 +1,6 @@
 "use client";
 import styles from "./Navbar.module.css";
-// Import hooks
-import { useLinks } from "@/contexts/linksContexts/LinksContext";
-import { useRouter } from "next/navigation";
+
 // Import Components
 import Aside from "@/components/aside/Aside";
 import Logo from "@/components/logo/Logo";
@@ -13,9 +11,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 const Navbar = () => {
   // Import all data links from context provider
-  const { setActiveLink } = useLinks();
   const [scrollY, setScrollY] = useState(0);
-  const [headerHeight, setHeaderHeight] = useState(0);
 
   // Change Navbar background color when scrolling
   useEffect(() => {
@@ -24,25 +20,15 @@ const Navbar = () => {
       setScrollY(window.scrollY);
     };
 
-    // Get Header Element Offset
-    const header = document.querySelector("header");
-    // Check if header element exists
-    if (header) {
-      setHeaderHeight(header.offsetHeight);
-    }
-
     // Add scroll event listener and callback function handleScroll
     window.addEventListener("scroll", handleScroll);
-
     // Remove scroll event listener when component unmounts
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`${styles.header} ${
-        scrollY > headerHeight ? styles.scrolled : ""
-      }`}
+      className={`${styles.header} ${scrollY > 0 ? styles.scrolled : ""}`}
     >
       <Aside />
       <nav className={styles.nav}>
