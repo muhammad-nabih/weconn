@@ -3,7 +3,11 @@ import styles from "./Articles.module.css";
 import ArticleCard from "@/components/articleCard/ArticleCard";
 
 const Articles = async () => {
-  const response = await fetch(`https://dummyjson.com/products`);
+  const response = await fetch(`https://dummyjson.com/products`, {
+    next: {
+      revalidate: 120,
+    },
+  });
   const data = await response.json();
   const productsData = data.products;
 
@@ -11,8 +15,8 @@ const Articles = async () => {
     <section className={styles.articlesContainer}>
       <h2 className={styles.h2}>Articles</h2>
       <div className={styles.container}>
-        {productsData.map((product, index) => (
-          <ArticleCard key={index} product={product} />
+        {productsData.map((product) => (
+          <ArticleCard key={product.id} product={product} />
         ))}
       </div>
     </section>

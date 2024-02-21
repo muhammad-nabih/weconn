@@ -3,6 +3,7 @@ import styles from "./ArticleCard.module.css";
 import { PinContainer } from "@/components/ui/3d-pin";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const ArticleCard = ({ product }) => {
   const { title, id, description, rating, brand, category, thumbnail } =
@@ -16,13 +17,26 @@ const ArticleCard = ({ product }) => {
       : rating <= 4.5 && rating >= 4.2
       ? "Medium"
       : "";
+  const backgroundColor =
+    TheLevel === "Hard"
+      ? "#ff0000"
+      : TheLevel === "Medium"
+      ? "#40A2E3"
+      : "#34C700";
+
+  useEffect(() => {
+    console.log(TheLevel);
+  }, [TheLevel, backgroundColor]);
 
   return (
     <PinContainer title={title}>
       <Link href={`articles/${id}`} style={{ margin: "0 auto" }}>
         <div className={styles.card}>
           <div className={styles.level}>
-            <span className={styles.bullet}></span>
+            <span
+              style={{ backgroundColor: backgroundColor }}
+              className={styles.bullet}
+            ></span>
             <span className={styles.levelWord}>{TheLevel}</span>
           </div>
 

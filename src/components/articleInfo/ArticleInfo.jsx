@@ -4,23 +4,22 @@ import Image from "next/image";
 import styles from "./ArticleInfo.module.css";
 import { useSizeReading } from "@/contexts/sizeContext/SizeContext";
 import { dataArticles } from "@/data/articleData";
-import SkeletonLoading from "../../loaders/ArticleDetailsLoader/ArticleDetailsLoader";
+import SkeletonLoading from "../skeletonLoading/SkeletonLoading";
 
 // ArticleInfo component
 export default function ArticleInfo({ params }) {
   const articleTitle = params.articleTitle;
   // Constants for text sizes
   const textSizeStyles = {
-    largeTitle: "25px",
-    smallTitle: "19px",
-    largeDescription: "17px",
-    smallDescription: "11px",
+    h3Lg: "25px",
+    h3Sm: "19px",
+    pLg: "17px",
+    pSm: "11px",
   };
 
   // State variables
   const { textSize } = useSizeReading();
-  const { largeTitle, smallTitle, largeDescription, smallDescription } =
-    textSizeStyles;
+  const { h3Lg, h3Sm, pLg, pSm } = textSizeStyles;
   const [articleInfo, setArticleInfo] = useState({});
   const [isLoading, setIsLoading] = useState(true); // حالة التحميل
 
@@ -105,9 +104,9 @@ export default function ArticleInfo({ params }) {
                 style={{
                   fontSize:
                     textSize === "large"
-                      ? largeTitle
+                      ? h3Lg
                       : textSize === "small"
-                      ? smallTitle
+                      ? h3Sm
                       : "",
                 }}
                 className={styles.title}
@@ -119,9 +118,9 @@ export default function ArticleInfo({ params }) {
                 style={{
                   fontSize:
                     textSize === "large"
-                      ? largeDescription
+                      ? pLg
                       : textSize === "small"
-                      ? smallDescription
+                      ? pSm
                       : "",
                 }}
               >

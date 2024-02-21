@@ -1,4 +1,4 @@
-import styles from "./ArticleDetailsLoader.module.css";
+import styles from "./SketelonLoading.module.css";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 export default function SkeletonLoading() {
@@ -55,11 +55,12 @@ export default function SkeletonLoading() {
           <div>
             <Skeleton
               height={"20px"}
-              count={0.1}
+              count={.1}
               containerClassName="flex-1"
               enableAnimation={true}
               inline={true}
               borderRadius={6}
+
             />
             <Skeleton
               height={"20px"}
@@ -67,7 +68,8 @@ export default function SkeletonLoading() {
               containerClassName="flex-1"
               enableAnimation={true}
               borderRadius={6}
-              style={{ marginLeft: "10px" }}
+              style={{marginLeft:"10px"}}
+             
             />
           </div>
         </SkeletonTheme>
