@@ -24,7 +24,7 @@ const PinContainer = ({
     <div
       className={cn(
         "relative group/pin z-50  cursor-pointer",
-        containerClassName
+        // containerClassName
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -40,7 +40,7 @@ const PinContainer = ({
           style={{
             transform: transform,
           }}
-          className="absolute left-1/2 p-4 top-1/2  flex justify-start items-start  rounded-2xl   group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+          className="absolute left-1/2  top-1/2  flex justify-start items-start transition duration-700 overflow-hidden"
         >
           <div className={cn(" relative z-50 ", className)}>{children}</div>
         </div>

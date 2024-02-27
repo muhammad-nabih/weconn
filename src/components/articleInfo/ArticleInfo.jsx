@@ -21,7 +21,7 @@ export default function ArticleInfo({ params }) {
   const { textSize } = useSizeReading();
   const { h3Lg, h3Sm, pLg, pSm } = textSizeStyles;
   const [articleInfo, setArticleInfo] = useState({});
-  const [isLoading, setIsLoading] = useState(true); // حالة التحميل
+  const [isLoading, setIsLoading] = useState(true);
 
   // Fetching article information
   useEffect(() => {
