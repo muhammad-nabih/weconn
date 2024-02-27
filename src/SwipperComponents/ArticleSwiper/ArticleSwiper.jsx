@@ -1,20 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
-
+import { breakpoints } from "./mediaQuery";
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-
-import './styles.css';
-
-// import required modules
-import { Navigation } from 'swiper/modules';
-
 import "swiper/css";
-
-import styles from "./ArticleSwiper.module.css";
+import "swiper/css/navigation";
+import "./styles.css";
+import "swiper/css";
 import ArticleCard from "@/components/articleCard/ArticleCard";
 
 const ArticleSwiper = () => {
@@ -39,38 +31,11 @@ const ArticleSwiper = () => {
 
   return (
     <Swiper
+      loop={true}
       slidesPerView={1}
       spaceBetween={20}
-      breakpoints={{
-        730: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-        1280: {
-          slidesPerView: 4,
-          spaceBetween: 50,
-        },
-        1600: {
-          slidesPerView: 5,
-          spaceBetween: 60,
-        },
-        2100: {
-          slidesPerView: 6,
-          spaceBetween: 70,
-        },
-      }}
-      className={`mySwiper ${styles.swiperContainer}`}
-      rewind={true}
-      navigation={true}
-      modules={[Navigation]}
+      breakpoints={breakpoints}
+      className={`mySwiper`}
     >
       {productsData.map((product) => (
         <SwiperSlide key={product.id}>

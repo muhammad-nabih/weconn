@@ -1,7 +1,7 @@
 .box {
     display: flex;
     width: calc(100% - 5.46rem);
-    margin: 0 auto;
+    margin: 0 auto 15px;
     height: 68px;
     justify-content: space-between;
     align-items: center;
