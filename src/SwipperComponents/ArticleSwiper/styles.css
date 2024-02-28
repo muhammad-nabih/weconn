@@ -1,5 +1,11 @@
 .swiper {
     height: 100%;
     width: calc(100% - 5.46rem);
+}
 
+
+@media (max-width: 768px) {
+    .swiper {
+        width: calc(100% - 21px);
+    }
 }

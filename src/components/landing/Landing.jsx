@@ -1,6 +1,8 @@
 import "./landing.css";
 import styles from "./Landing.module.css";
 import Image from "next/image";
+import Typewriter from "react-typing-effect";
+
 
 export default function Landing() {
   return (
@@ -10,7 +12,6 @@ export default function Landing() {
           src={"/images/flowers.png"}
           width={300}
           height={500}
-         
           priority={true}
           alt="Flowers"
         />
@@ -20,7 +21,6 @@ export default function Landing() {
           src={"/images/women.png"}
           width={300}
           height={500}
-
           priority={true}
           alt="Woman Read"
         />
@@ -28,12 +28,12 @@ export default function Landing() {
 
       {/* Start Text Info Section */}
       <article className={styles.textInfo}>
-        <p className={styles.headText}>
-          The Ultimate
-          <br className="break-mobile" /> Guide To
-          <br className="break" />
-          understanding Cryptocurrency
-        </p>
+        <div className={styles.headText}>
+          <div style={styles.ultimate}>
+            The Ultimate <span className={styles.guide}>Guide To</span>
+          </div>
+          <span className={styles.guide}>understanding</span> Cryptocurrency
+        </div>
         <p className={styles.description}>
           Discover Crypto In The Ultimate Guide, Exploring Its Decentralized
           System, <br className="break" />

@@ -34,7 +34,7 @@ const ArticleCard = ({ product }) => {
 
         {/* Image Box */}
         <div className={styles.imageContainer}>
-          <Image src={thumbnail} alt={description} width={320} height={320} />
+          <Image src={thumbnail} alt={description} width={490} height={490} />
         </div>
         <p className={styles.description}>{title}</p>
         <div className={styles.topicBox}>

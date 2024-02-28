@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: flex-start;
     background-color: var(--card-bgColor);
-    width: 321px;
+    width: 317px;
     border-radius: 8px;
     box-shadow: rgba(255, 255, 255, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
@@ -27,7 +27,7 @@
     width: 7.839px;
     height: 7.839px;
     border-radius: 50%;
-    margin-left:10px ;
+    margin-left: 10px;
 
 }
 
@@ -138,4 +138,16 @@
     color: var(--colorTopic);
     font-size: 14px;
     font-weight: 500;
+}
+
+@media (max-width: 420px) {
+    .card {
+        width: 300px;
+    }
+
+    .imageContainer {
+
+        width: 290px;
+
+    }
 }

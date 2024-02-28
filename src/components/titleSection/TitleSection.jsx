@@ -13,7 +13,6 @@ const TitleSection = ({ title, url }) => {
           See All
         </Link>
       </section>
-      
     </>
   );
 };
