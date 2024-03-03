@@ -10,7 +10,7 @@
 .imageContainer {
     width: 100%;
     position: relative;
-    width: 100%;
+    aspect-ratio: 16/9;
     z-index: -1;
     border-radius: 12px;
     overflow: hidden;

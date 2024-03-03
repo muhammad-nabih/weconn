@@ -22,6 +22,8 @@
 .image {
 
     display: flex;
+    background-color: #3c486b
+    ; border-radius: 5px;
 }
 
 .box {

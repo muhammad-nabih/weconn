@@ -12,15 +12,16 @@ export default function SkeletonLoading() {
           borderRadius={12}
           duration={2.5}
         >
-          <div className={styles.image}>
+          
             <Skeleton
               width={"100%"}
               height={"300px"}
+              enableAnimation={true}
               count={1}
               containerClassName="flex-1"
-              enableAnimation={true}
+              borderRadius={6}
             />
-          </div>
+       
 
           {/* title  */}
           <div className={styles.title}>
@@ -55,12 +56,11 @@ export default function SkeletonLoading() {
           <div>
             <Skeleton
               height={"20px"}
-              count={.1}
+              count={0.1}
               containerClassName="flex-1"
               enableAnimation={true}
               inline={true}
               borderRadius={6}
-
             />
             <Skeleton
               height={"20px"}
@@ -68,8 +68,7 @@ export default function SkeletonLoading() {
               containerClassName="flex-1"
               enableAnimation={true}
               borderRadius={6}
-              style={{marginLeft:"10px"}}
-             
+              style={{ marginLeft: "10px" }}
             />
           </div>
         </SkeletonTheme>

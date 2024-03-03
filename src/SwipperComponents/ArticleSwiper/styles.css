@@ -9,3 +9,7 @@
         width: calc(100% - 21px);
     }
 }
+
+.swiper-slide {
+    width: 310px !important;
+}

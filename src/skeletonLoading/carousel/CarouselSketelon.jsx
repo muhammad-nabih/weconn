@@ -9,7 +9,7 @@ export default function CarouselSketelon() {
         <SkeletonTheme
           baseColor="var(--baseColorSketelon)"
           highlightColor="var(--highlightColorSketelon)"
-          height={600}
+          height={306}
           borderRadius={12}
           duration={2.5}
         >
@@ -19,7 +19,7 @@ export default function CarouselSketelon() {
                 <div className={styles.image}>
                   <Skeleton
                     width={"100%"}
-                    height={"220px"}
+                    height={"163px"}
                     count={1}
                     containerClassName="flex-1"
                     enableAnimation={true}

@@ -5,11 +5,13 @@ import { breakpoints } from "./mediaQuery";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "./styles.css";
 import "swiper/css";
+import "./styles.css";
+
 import ArticleCard from "@/components/articleCard/ArticleCard";
-import SkeletonLoading from "@/components/skeletonLoading/SkeletonLoading";
-import CarouselSketelon from "@/components/skeletonLoading/carousel/CarouselSketelon";
+
+import CarouselSketelon from "@/skeletonLoading/carousel/CarouselSketelon";
+import SkeletonLoading from "@/skeletonLoading/SkeletonLoading";
 
 const ArticleSwiper = () => {
   const [productsData, setProductsData] = useState([]);
@@ -17,7 +19,6 @@ const ArticleSwiper = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-
         const response = await fetch(`https://dummyjson.com/products`, {
           next: {
             revalidate: 60,
