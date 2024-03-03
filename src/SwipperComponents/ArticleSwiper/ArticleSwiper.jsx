@@ -8,6 +8,8 @@ import "swiper/css/navigation";
 import "./styles.css";
 import "swiper/css";
 import ArticleCard from "@/components/articleCard/ArticleCard";
+import SkeletonLoading from "@/components/skeletonLoading/SkeletonLoading";
+import CarouselSketelon from "@/components/skeletonLoading/carousel/CarouselSketelon";
 
 const ArticleSwiper = () => {
   const [productsData, setProductsData] = useState([]);
@@ -15,6 +17,7 @@ const ArticleSwiper = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+
         const response = await fetch(`https://dummyjson.com/products`, {
           next: {
             revalidate: 60,
@@ -37,11 +40,15 @@ const ArticleSwiper = () => {
       breakpoints={breakpoints}
       className={`mySwiper`}
     >
-      {productsData.map((product) => (
-        <SwiperSlide key={product.id}>
-          <ArticleCard product={product} />
-        </SwiperSlide>
-      ))}
+      {productsData.length > 0 ? (
+        productsData.map((product) => (
+          <SwiperSlide key={product.id}>
+            <ArticleCard product={product} />
+          </SwiperSlide>
+        ))
+      ) : (
+        <CarouselSketelon />
+      )}
     </Swiper>
   );
 };

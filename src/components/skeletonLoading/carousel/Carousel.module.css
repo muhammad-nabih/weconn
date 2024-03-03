@@ -1,0 +1,21 @@
+.container {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+}
+
+.box {
+    width: 300px;
+    background-color: #46537c20;
+    border-radius: 10px;
+}
+
+.image {
+    width: 300px;
+}
+
