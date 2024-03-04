@@ -3,6 +3,7 @@ import { PinContainer } from "@/components/ui/3d-pin";
 import styles from "./Articles.module.css";
 import ArticleCard from "@/components/articleCard/ArticleCard";
 import { useState, useEffect } from "react";
+import PageLoading from "@/skeletonLoading/pageLoading/PageLoading";
 const Articles = () => {
   const [productsData, setProductsData] = useState([]);
   useEffect(() => {
@@ -25,11 +26,15 @@ const Articles = () => {
     <section className={styles.articlesContainer}>
       <h2 className={styles.h2}>Articles</h2>
       <div className={styles.container}>
-        {productsData.map((product) => (
-          <PinContainer key={product.id} title={product.title}>
-            <ArticleCard product={product} />
-          </PinContainer>
-        ))}
+        {productsData.length > 0 ? (
+          productsData.map((product) => (
+            <PinContainer key={product.id} title={product.title}>
+              <ArticleCard product={product} />
+            </PinContainer>
+          ))
+        ) : (
+          <PageLoading />
+        )}
       </div>
     </section>
   );

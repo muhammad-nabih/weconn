@@ -2,7 +2,6 @@
     width: 100%;
     display: flex;
     justify-content: center;
-
 }
 
 
@@ -20,10 +19,9 @@
 }
 
 .image {
-
     display: flex;
-    background-color: #3c486b
-    ; border-radius: 5px;
+    background-color: #3c486b;
+    border-radius: 5px;
 }
 
 .box {
@@ -31,7 +29,6 @@
 }
 
 .title {
-
     position: relative;
     display: flex;
     gap: 20px;

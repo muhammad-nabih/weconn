@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.contain {
+    width: 310px;
+}

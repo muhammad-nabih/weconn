@@ -8,8 +8,9 @@
 
 .container {
     display: grid;
-    gap: 25px 20px;
     width: 100%;
+    justify-content: space-between;
+    row-gap: 25px;
 }
 
 .h2 {
@@ -19,7 +20,7 @@
     text-transform: capitalize;
     margin-bottom: 1.56rem;
     text-align: left;
-    margin-left: 25px;
+
 }
 
 
@@ -58,9 +59,7 @@
         width: 1025px;
     }
 
-    .h2 {
-        margin-left: 0;
-    }
+
 }
 
 @media (min-width:1536px) {
@@ -74,7 +73,5 @@
         width: 1536px;
     }
 
-    .h2 {
-        margin-left: 25px;
-    }
+
 }

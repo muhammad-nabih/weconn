@@ -11,7 +11,7 @@ import "./styles.css";
 import ArticleCard from "@/components/articleCard/ArticleCard";
 
 import CarouselSketelon from "@/skeletonLoading/carousel/CarouselSketelon";
-import SkeletonLoading from "@/skeletonLoading/SkeletonLoading";
+import SkeletonLoading from "@/skeletonLoading/CardDetailsLoading/CardDetailsLoading";
 
 const ArticleSwiper = () => {
   const [productsData, setProductsData] = useState([]);
@@ -43,7 +43,10 @@ const ArticleSwiper = () => {
     >
       {productsData.length > 0 ? (
         productsData.map((product) => (
-          <SwiperSlide key={product.id}>
+          <SwiperSlide
+            key={product.id}
+            style={{ marginLeft: "20px !important" }}
+          >
             <ArticleCard product={product} />
           </SwiperSlide>
         ))

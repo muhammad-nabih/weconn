@@ -1,8 +1,7 @@
-import React from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import styles from "./Carousel.module.css";
 export default function CarouselSketelon() {
-  const boxes = [1, 2, 3, 4,5,6];
+  const boxes = [1, 2, 3, 4, 5, 6];
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -19,7 +18,7 @@ export default function CarouselSketelon() {
                 <div className={styles.image}>
                   <Skeleton
                     width={"100%"}
-                    height={"163px"}
+                    height={"180px"}
                     count={1}
                     containerClassName="flex-1"
                     enableAnimation={true}
@@ -50,7 +49,7 @@ export default function CarouselSketelon() {
                     borderRadius={6}
                   />
                   <Skeleton
-                    height={"20px"}
+                    height={"15px"}
                     count={0.2}
                     containerClassName="flex-1"
                     enableAnimation={true}
@@ -60,7 +59,7 @@ export default function CarouselSketelon() {
                 </div>
                 <Skeleton
                   width={"100%"}
-                  height={"1px"}
+                  height={"2px"}
                   count={1}
                   borderRadius={6}
                   enableAnimation={true}
@@ -68,7 +67,7 @@ export default function CarouselSketelon() {
                 {/* description */}
                 <Skeleton
                   width={"100%"}
-                  height={"20px"}
+                  height={"15px"}
                   count={0.1}
                   borderRadius={6}
                   enableAnimation={true}
@@ -76,7 +75,7 @@ export default function CarouselSketelon() {
                 />
                 <Skeleton
                   width={"100%"}
-                  height={"20px"}
+                  height={"15px"}
                   count={0.1}
                   borderRadius={6}
                   enableAnimation={true}

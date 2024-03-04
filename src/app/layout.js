@@ -6,6 +6,7 @@ import Lightness from "@/components/lightness/Lightness";
 import LinksProvider from "@/contexts/linksContexts/LinksContext";
 // Context Provider import
 import AsideProvider from "@/contexts/asideContext/AsideContext";
+import Footer from "@/components/footer/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
             <Lightness />
             <Navbar />
             {children}
+            <Footer />
           </body>
         </AsideProvider>
       </LinksProvider>

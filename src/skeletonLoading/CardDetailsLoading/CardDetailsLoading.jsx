@@ -1,7 +1,7 @@
-import styles from "./SketelonLoading.module.css";
+import styles from "./CardDetailsLoading.module.css";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-export default function SkeletonLoading() {
+export default function CardDetailsLoading() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -12,16 +12,14 @@ export default function SkeletonLoading() {
           borderRadius={12}
           duration={2.5}
         >
-          
-            <Skeleton
-              width={"100%"}
-              height={"300px"}
-              enableAnimation={true}
-              count={1}
-              containerClassName="flex-1"
-              borderRadius={6}
-            />
-       
+          <Skeleton
+            width={"100%"}
+            height={"300px"}
+            enableAnimation={true}
+            count={1}
+            containerClassName="flex-1"
+            borderRadius={6}
+          />
 
           {/* title  */}
           <div className={styles.title}>

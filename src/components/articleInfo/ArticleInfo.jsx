@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./ArticleInfo.module.css";
 import { useSizeReading } from "@/contexts/sizeContext/SizeContext";
 import { dataArticles } from "@/data/articleData";
-import SkeletonLoading from "@/skeletonLoading/SkeletonLoading";
+import CardDetailsLoading from "@/skeletonLoading/CardDetailsLoading/CardDetailsLoading";
 
 // ArticleInfo component
 export default function ArticleInfo({ params }) {
@@ -27,8 +27,6 @@ export default function ArticleInfo({ params }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-
-
         const response = await fetch(
           `https://dummyjson.com/products/${articleTitle}`,
           {
@@ -61,7 +59,7 @@ export default function ArticleInfo({ params }) {
 
   // Show loading if data is still being fetched
   if (isLoading) {
-    return <SkeletonLoading />;
+    return <CardDetailsLoading />;
   }
 
   return (

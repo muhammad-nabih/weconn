@@ -1,4 +1,4 @@
-import React from "react";
+import Footer from "@/components/footer/Footer";
 
 export const metadata = {
   title: "Articles",

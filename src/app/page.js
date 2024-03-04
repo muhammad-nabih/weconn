@@ -1,16 +1,11 @@
-import ArticleSwiper from "@/SwipperComponents/ArticleSwiper/ArticleSwiper";
 import Landing from "@/components/landing/Landing";
-import TitleSection from "@/components/titleSection/TitleSection";
-import React from "react";
+import Explore from "./(dynamicPages)/explore/page";
 
 const Home = () => {
   return (
     <div>
       <Landing />
-      <TitleSection url={"/news"} title={"latest News"} />
-      <TitleSection url={"/articles"} title={"Articles"} />
-      <ArticleSwiper />
-      <TitleSection url={"/idos"} title={"IDOs"} />
+      <Explore />
     </div>
   );
 };

@@ -10,6 +10,7 @@
   --link-forColor: #FFFFFF99;
   --link-hoverColor: #54CDA9;
   --footer-forColor: #FFFFFF4D;
+  --footer-bgColor: #121E44;
   --paragraph-forColor: #FFFFFFCC;
   --card-bgColor: #FFFFFF;
   --cardDetails-forColor: #14224D;
@@ -20,9 +21,9 @@
   --asideBg: #16285F;
   --asideCoverBg: rgba(12, 21, 50, 0.80);
   --baseColorSketelon: #3C486B;
-    --highlightColorSketelon:#516191;
-    /* All Size For BorderRadius  */
-    --radiusCard: 0.5rem;
+  --highlightColorSketelon: #516191;
+  /* All Size For BorderRadius  */
+  --radiusCard: 0.5rem;
   --RadiusTopic: 6.25rem;
   /* Transition */
   --main-transition: .3s;
