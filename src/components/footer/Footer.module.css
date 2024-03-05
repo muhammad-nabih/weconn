@@ -136,6 +136,10 @@
 }
 
 @media (max-width: 1060px) {
+    .container {
+        width: calc(100% - 48px);
+    }
+
     .box {
         flex-basis: 49%;
     }
@@ -155,6 +159,10 @@
 }
 
 @media (max-width: 767px) {
+    .container {
+        width: calc(100% - 32px);
+    }
+
     .box {
         flex-basis: 100%;
         text-align: center;
