@@ -52,11 +52,11 @@
 
 .description {
     color: rgba(255, 255, 255, 0.70);
-    font-family: Poppins;
+
     font-size: 20px;
-    font-style: normal;
+
     font-weight: 600;
-    line-height: normal;
+
     width: 24ch;
 }
 
@@ -77,21 +77,21 @@
 
 .link {
     color: rgba(255, 255, 255, 0.60);
-    font-family: Poppins;
+
     font-size: 16px;
-    font-style: normal;
+
     font-weight: 500;
-    line-height: normal;
+
     text-transform: capitalize;
 }
 
 .h3 {
     color: var(--Cold-Grey-white, #FFF);
-    font-family: Poppins;
+
     font-size: 20px;
-    font-style: normal;
+
     font-weight: 600;
-    line-height: normal;
+
 }
 
 .inputBox {
@@ -105,11 +105,9 @@
 
 .input {
     color: rgba(18, 30, 68, 0.40);
-    font-family: Poppins;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+
 }
 
 .input:focus {
@@ -180,6 +178,23 @@
 
     .inputBox {
         width: 100%;
+    }
+
+    .input {
+        color: rgba(18, 30, 68, 0.40);
+        font-size: 14px;
+        font-weight: 400;
+
+    }
+
+    .subscribe {
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        padding: 8px 18px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     .listsContainer {
