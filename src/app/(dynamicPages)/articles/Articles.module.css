@@ -29,6 +29,7 @@
     /* tablet, landscape iPad, lo-res laptops ands desktops */
     .container {
         grid-template-columns: repeat(1, auto);
+        justify-content: center;
     }
 
     .articlesContainer {
