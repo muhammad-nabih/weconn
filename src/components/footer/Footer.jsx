@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./footer.module.css";
+import styles from "./Footer.module.css";
 
 const iconsData = [
   { src: "images/facebook.svg", alt: "Facebook Icon" },
